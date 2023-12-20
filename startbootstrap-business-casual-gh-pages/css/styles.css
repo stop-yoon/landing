@@ -42,7 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 230, 167, 86;
+  --bs-primary-rgb: white;
   --bs-secondary-rgb: 47, 23, 15;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -56,7 +56,7 @@
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-gradient: linear-gradient(180deg, rgb(255, 255, 255), rgba(255, 255, 255, 0));
   --bs-body-font-family: Lora, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -73,8 +73,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #e6a756;
-  --bs-link-hover-color: #b88645;
+  --bs-link-color: #5673e6;
+  --bs-link-hover-color: #5976ff;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -84,7 +84,13 @@
 *::after {
   box-sizing: border-box;
 }
-
+    .course-item {
+        border: 1px solid #ddd; /* 테두리 스타일 및 색상 설정 */
+        background-color: #fff; /* 배경색 설정 */
+        padding: 20px; /* 각 course-item의 안쪽 여백 설정 */
+        margin-bottom: 20px; /* 각 course-item 간의 간격 설정 */
+        border-radius: 10px; /* 테두리의 둥근 정도를 조절합니다. */
+    }
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -332,7 +338,7 @@ tfoot,
 tr,
 td,
 th {
-  border-color: inherit;
+  border-color: black;
   border-style: solid;
   border-width: 0;
 }
@@ -1816,7 +1822,7 @@ progress {
 
 .table-primary {
   --bs-table-color: #000;
-  --bs-table-bg: #faeddd;
+  --bs-table-bg: #fff;
   --bs-table-border-color: #e1d5c7;
   --bs-table-striped-bg: #eee1d2;
   --bs-table-striped-color: #000;
@@ -1873,7 +1879,7 @@ progress {
 .table-warning {
   --bs-table-color: #000;
   --bs-table-bg: #fff3cd;
-  --bs-table-border-color: #e6dbb9;
+  --bs-table-border-color: #ff9f9f;
   --bs-table-striped-bg: #f2e7c3;
   --bs-table-striped-color: #000;
   --bs-table-active-bg: #e6dbb9;
@@ -2024,7 +2030,6 @@ progress {
   background-color: #fff;
   border-color: #f3d3ab;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(230, 167, 86, 0.25);
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -2171,7 +2176,6 @@ textarea.form-control-lg {
 .form-select:focus {
   border-color: #f3d3ab;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(230, 167, 86, 0.25);
 }
 .form-select[multiple], .form-select[size]:not([size="1"]) {
   padding-right: 0.75rem;
@@ -2337,12 +2341,6 @@ textarea.form-control-lg {
 }
 .form-range:focus {
   outline: 0;
-}
-.form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(230, 167, 86, 0.25);
-}
-.form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(230, 167, 86, 0.25);
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -10826,7 +10824,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bg.jpg");
+  background-color: royalblue;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10891,7 +10889,7 @@ p {
 }
 
 #mainNav {
-  background-color: rgba(47, 23, 15, 0.9);
+  background-color: lightsteelblue;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #mainNav .navbar-brand {
@@ -10935,7 +10933,6 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
 }
 .cta .cta-inner {
   position: relative;
@@ -10955,7 +10952,7 @@ p {
 }
 
 .footer {
-  background-color: rgba(47, 23, 15, 0.9);
+  background-color: darkblue;
 }
 
 .intro {
@@ -11004,18 +11001,6 @@ p {
   }
 }
 
-.list-hours {
-  font-size: 0.9rem;
-}
-.list-hours .list-hours-item {
-  border-bottom: 1px solid rgba(230, 167, 86, 0.5);
-  padding-bottom: 0.25rem;
-  margin-bottom: 1rem;
-  font-style: italic;
-}
-.list-hours .list-hours-item.today {
-  font-weight: bold;
-  color: #e6a756;
 }
 @media (min-width: 992px) {
   .list-hours {
